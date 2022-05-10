@@ -1,9 +1,20 @@
 class Solution
 {
     public:
+    
+    /*
+        Three steps in Recursion
+        
+        1. Base Case
+        2. Recursive Call
+        3. Calculation
+    
+    */
 
         int find(vector<int> &digits, int start, int end, vector<int> &out)
         {
+            // Base Case
+            
             if (start == end)
             {
                 if (digits[start] == 9)
@@ -20,9 +31,12 @@ class Solution
                 }
             }
 
-            int small_output = find(digits, start + 1, end, out);
+            int carry = find(digits, start + 1, end, out);   // Recursive Call
 
-            if (small_output)
+            
+            // Calculation part
+            
+            if (carry)
             {
                 if (digits[start] == 9)
                 {
