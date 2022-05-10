@@ -21,7 +21,7 @@ class Solution
             while (row_start <= row_end && col_start <= col_end)
             {
 
-                while (curr_col <= col_end )	 // left to right
+                while (curr_col <= col_end)	// left to right
                 {
                     int element = matrix[row_start][curr_col];
 
