@@ -17,7 +17,7 @@ class Solution
 
             for (auto it: table)
             {
-                if (k == 0)
+                if (k == 0)      // if k==0 we have to check how many elements have occured more than once
                 {
                     if (it.second >= 2)
                         count++;
